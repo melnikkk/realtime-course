@@ -21,6 +21,7 @@ app.use(bodyParser.json());
 app.use(express.static("frontend"));
 
 app.get("/poll", function (req, res) {
+  res.status(500).json({})
   res.json({
     msg: getMsgs(),
   })
